@@ -1,0 +1,25 @@
+{
+  "name": "named-list",
+  "version": "0.0.1",
+  "description": "Named list for Node.js 4.0+",
+  "main": "lib/main.js",
+  "author": "Mgen (https://www.mgenware.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/mgenware/named-list",
+  "bugs": "https://github.com/mgenware/named-list/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mgenware/named-list.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}
