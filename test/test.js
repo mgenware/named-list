@@ -5,7 +5,7 @@ var NamedList = require('../lib/main');
 
 describe('NamedList.isKey', () => {
     var validKeys = ['[aaa]', '[[[b nd df]]]', '[  ]'];
-    var invalidKeys = ['[][]', '[][', 'a', ' '];
+    var invalidKeys = ['[][]', '[][', 'a', ' ', ' [aaa]'];
     var expKeys = ['[]'];
 
     for (let key of validKeys) {
@@ -27,6 +27,35 @@ describe('NamedList.isKey', () => {
             });
         });
     }
+});
+
+describe('NamedList.isEntity', () => {
+    var validEntities = ['[]aaa', '[][]', '[] ', '[][[['];
+    var invalidEntities = ['[[[]]]', '][', 'a', ' '];
+
+    for (let key of validEntities) {
+        it(`Valid entity: ${key}`, () => {
+            assert(NamedList.isEntity(key));
+        });
+    }
+
+    for (let key of invalidEntities) {
+        it(`Invalid entity: ${key}`, () => {
+            assert(NamedList.isEntity(key) === false);
+        });
+    }
+});
+
+describe('NamedList.extractKeyContent', () => {
+    it('[a] == a', () => {
+        assert.equal(NamedList.extractKeyContent('[a]'), 'a');
+    });
+});
+
+describe('NamedList.extractEntityContent', () => {
+    it('[][[[]]] == [[[]]]', () => {
+        assert.equal(NamedList.extractKeyContent('[][[[]]]'), '[[[]]]');
+    });
 });
 
 describe('NamedList.parse', () => {
