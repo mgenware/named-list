@@ -6,7 +6,7 @@ var NamedList = require('../lib/main');
 describe('NamedList.isKey', () => {
     var validKeys = ['[aaa]', '[[[b nd df]]]', '[  ]'];
     var invalidKeys = ['[][]', '[][', 'a', ' '];
-    var expKeys = '[]';
+    var expKeys = ['[]'];
 
     for (let key of validKeys) {
         it(`Valid key: ${key}`, () => {
@@ -17,6 +17,14 @@ describe('NamedList.isKey', () => {
     for (let key of invalidKeys) {
         it(`Invalid key: ${key}`, () => {
             assert(NamedList.isKey(key) === false);
+        });
+    }
+
+    for (let key of expKeys) {
+        it(`Key with exception: ${key}`, () => {
+            assert.throws(() => {
+                NamedList.isKey(key);
+            });
         });
     }
 });
