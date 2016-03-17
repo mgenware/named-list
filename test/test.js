@@ -54,7 +54,7 @@ describe('NamedList.extractKeyContent', () => {
 
 describe('NamedList.extractEntityContent', () => {
     it('[][[[]]] == [[[]]]', () => {
-        assert.equal(NamedList.extractKeyContent('[][[[]]]'), '[[[]]]');
+        assert.equal(NamedList.extractEntityContent('[][[[]]]'), '[[[]]]');
     });
 });
 
