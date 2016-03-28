@@ -10,6 +10,11 @@ Named list for Node.js 4.0+.
 npm install named-list
 ```
 
+## Run tests
+```sh
+npm test
+```
+
 # Get started
 ```js
 var NamedList = require('named-list');
@@ -66,11 +71,6 @@ Result
 {
     "Key": ["Value"]
 }
-```
-
-## Run tests
-```sh
-npm test
 ```
 
 # License
