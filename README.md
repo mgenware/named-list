@@ -14,7 +14,7 @@ npm install named-list
 ```js
 var NamedList = require('named-list');
 ```
-## Named.parse(str)
+## NamedList.parse(str)
 Parse a named list from a string, return an object.
 
 ## A basic list
