@@ -48,7 +48,7 @@ Result
 Result
 ```json
 {
-    "Key1": ["I'm not a key"],
+    "Key1": ["[I'm not a key]"],
     "Key2": null
 }
 ```
