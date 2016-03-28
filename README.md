@@ -38,6 +38,36 @@ Result
 }
 ```
 
+## Use [] to escape square brackets
+```
+[Key1]
+[][I'm not a key]
+[Key2]
+```
+
+Result
+```json
+{
+    "Key1": ["I'm not a key"],
+    "Key2": null
+}
+```
+
+## Empty lines are simply ignored
+```
+[Key]
+
+Value
+
+```
+
+Result
+```json
+{
+    "Key": ["Value"]
+}
+```
+
 ## Run tests
 ```sh
 npm test
