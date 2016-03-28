@@ -10,6 +10,34 @@ Named list for Node.js 4.0+.
 npm install named-list
 ```
 
+# Get started
+```js
+var NamedList = require('named-list');
+```
+## Named.parse(str)
+Parse a named list from a string, return an object.
+
+## A basic list
+* Key names are surrounded by square brackets.
+* A key can have zero or multiple value(s).
+```
+[Key1]
+Value 1
+Value 2
+[Key with spaces]
+Value 1
+[Key with no value]
+```
+
+Result
+```json
+{
+    "Key1": ["Value 1", "Value 2"],
+    "Key with spaces": ["Value 1"],
+    "Key with no value": null
+}
+```
+
 ## Run tests
 ```sh
 npm test
