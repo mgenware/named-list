@@ -5,25 +5,25 @@
 
 Named list for Node.js 4.0+.
 
-## Installation
+Installation:
 ```sh
 npm install named-list
 ```
 
-## Run tests
+Run tests:
 ```sh
 npm test
 ```
 
-# Get started
+## Getting started
 ```js
 var NamedList = require('named-list');
 ```
-## NamedList.parse(str)
+### NamedList.parse(str)
 Parse a named list from a string, return an object.
 
-## A basic list
-* Key names are surrounded by square brackets.
+### A sample named list
+* Keys are surrounded by square brackets.
 * A key can have zero or multiple value(s).
 ```
 [Key1]
@@ -32,18 +32,20 @@ Value 2
 [Key with spaces]
 Value 1
 [Key with no value]
+[Another key with no value]
 ```
 
-Result
+Result:
 ```json
 {
     "Key1": ["Value 1", "Value 2"],
     "Key with spaces": ["Value 1"],
-    "Key with no value": null
+    "Key with no value": null,
+    "Another key with no value": null
 }
 ```
 
-## Use [] to escape square brackets
+### Use [] to escape square brackets
 ```
 [Key1]
 [][I'm not a key]
@@ -58,7 +60,7 @@ Result
 }
 ```
 
-## Empty lines are simply ignored
+### Empty lines are simply ignored
 ```
 [Key]
 
@@ -73,5 +75,5 @@ Result
 }
 ```
 
-# License
+## License
 MIT
