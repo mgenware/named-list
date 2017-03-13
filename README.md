@@ -52,7 +52,7 @@ Result:
 [Key2]
 ```
 
-Result
+Result:
 ```json
 {
     "Key1": ["[I'm not a key]"],
@@ -68,7 +68,7 @@ Value
 
 ```
 
-Result
+Result:
 ```json
 {
     "Key": ["Value"]
